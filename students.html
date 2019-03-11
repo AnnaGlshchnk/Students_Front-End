@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Students</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<meta charset="UTF-8">
+<title>Groups</title>
+</head>
+<body>
+<div id="windowStudent">
+
+    <div id="dialog-student-form" title="Create new student">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                First name: <input type="text" name="firstName" id="firstName" class="text ui-widget-content ui-corner-all">
+                Surname: <input type="text" name="surname" id="surname"
+                                    class="text ui-widget-content ui-corner-all">
+                Birth date: <input type="text" name="birthDate" id="birthDate"
+                                    class="text ui-widget-content ui-corner-all">
+                Group ID: <input type="text" name="groupId" id="groupId"
+                                   class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+        <script>
+            $('#birthDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        </script>
+    </div>
+
+    <div id="edit-student-form" title="Edit group">
+        <p class="validateTips">All form fields are required.</p>
+        <form>
+            <fieldset>
+                First name: <input type="text" name="firstName" id="firstNameUpdate" class="text ui-widget-content ui-corner-all">
+                Surname: <input type="text" name="surname" id="surnameUpdate"
+                                class="text ui-widget-content ui-corner-all">
+                Birth date: <input type="text" name="birthDate" id="birthDateUpdate"
+                                   class="text ui-widget-content ui-corner-all">
+                Group ID: <input type="text" name="groupId" id="groupIdUpdate"
+                                 class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+        <script>
+            $('#birthDateUpdate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        </script>
+    </div>
+
+    <div id="filter-student-form" title="Filter student">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                Min Birth Date: <input type="text" name="minBirthDate" id="minBirthDate"
+                                    class="text ui-widget-content ui-corner-all">
+                Max Birth Date: <input type="text" name="maxBirthDate" id="maxBirthDate"
+                                    class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+        <script>
+            $('#minBirthDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+            $('#maxBirthDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        </script>
+    </div>
+</div>
+</body>
+<script src="js/students.js"></script>
+</html>

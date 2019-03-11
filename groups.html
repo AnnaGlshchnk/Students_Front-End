@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Groups</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Groups</title>
+</head>
+<body>
+<div id="window">
+
+    <div id="dialog-form" title="Create new group">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                Group name: <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+                Create date: <input type="text" name="createDate" id="createDate"
+                                    class="text ui-widget-content ui-corner-all">
+                Finish date: <input type="text" name="finishDate" id="finishDate"
+                                    class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+        <script>
+            $('#createDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+            $('#finishDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        </script>
+    </div>
+
+    <div id="edit-form" title="Edit group">
+        <p class="validateTips">All form fields are required.</p>
+        <form>
+            <fieldset>
+                Group name: <input type="text" name="name" id="updateName" class="text ui-widget-content ui-corner-all">
+                Create date: <input type="text" name="createDate" id="updateCreateDate"
+                                    class="text ui-widget-content ui-corner-all">
+                Finish date: <input type="text" name="finishDate" id="updateFinishDate"
+                                    class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+        <script>
+            $('#updateCreateDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+            $('#updateFinishDate').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        </script>
+    </div>
+
+    <div id="filter-form" title="Filter group">
+        <p class="validateTips">All form fields are required.</p>
+
+        <form>
+            <fieldset>
+                Create date: <input type="text" name="createDate" id="createDateNew"
+                                    class="text ui-widget-content ui-corner-all">
+                Finish date: <input type="text" name="finishDate" id="finishDateNew"
+                                    class="text ui-widget-content ui-corner-all">
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+            </fieldset>
+        </form>
+        <script>
+            $('#createDateNew').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+            $('#finishDateNew').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+        </script>
+    </div>
+</div>
+</body>
+<script src="js/groups.js"></script>
+</html>
